@@ -1,0 +1,17 @@
+{
+  "name": "inversify-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.2",
+    "chai": "^4.1.2",
+    "inversify": "^4.13.0",
+    "mocha": "^5.2.0",
+    "reflect-metadata": "^0.1.12",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  }
+}
