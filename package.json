@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "test": "mocha --recursive --require ts-node/register 'test/**/*.spec.ts'"
+    "test": "mocha --recursive --require ts-node/register 'test/**/*.spec.ts'",
+    "format": "prettier --write src/**/*.ts test/**/*.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.1.4",
@@ -14,9 +15,14 @@
     "chai": "^4.1.2",
     "inversify": "^4.13.0",
     "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.13.7",
     "reflect-metadata": "^0.1.12",
     "ts-node": "^7.0.0",
     "typescript": "^2.9.2"
-  }
+  },
+  "pre-commit": [
+    "test",
+    "format"
+  ]
 }
