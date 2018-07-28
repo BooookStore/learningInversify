@@ -1,12 +1,23 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "lib": ["es6"],
-        "types": ["reflect-metadata", "node"],
+        "lib": [
+            "es6"
+        ],
+        "types": [
+            "reflect-metadata",
+            "node"
+        ],
         "module": "commonjs",
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "baseUrl": "",
+        "paths": {
+            "src": [
+                "./src/*"
+            ]
+        }
     },
     "include": [
         "src/**/*"

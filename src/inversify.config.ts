@@ -11,7 +11,7 @@ container.bind<ThrowableWeapon>(TYPES.ThorwableWeapon).to(Shuriken);
 
 // Container Module
 let warriors = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-    bind<Ninja>("Ninja").to(Ninja);
+    bind<Ninja>("Ninja").to(Ninja).inSingletonScope();
 })
 
 container.load(warriors);
