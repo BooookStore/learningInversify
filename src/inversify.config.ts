@@ -1,7 +1,7 @@
-import {Container, ContainerModule, interfaces} from "inversify";
-import {TYPES} from "./types";
-import {Warrior, Weapon, ThrowableWeapon} from "./interfaces";
-import {Ninja, Katana, Shuriken} from "./entities";
+import { Container, ContainerModule, interfaces } from "inversify";
+import { TYPES } from "./types";
+import { Warrior, Weapon, ThrowableWeapon } from "./interfaces";
+import { Ninja, Katana, Shuriken } from "./entities";
 
 // Normal Container
 const container = new Container();
@@ -10,10 +10,14 @@ container.bind<Weapon>(TYPES.Weapon).to(Katana);
 container.bind<ThrowableWeapon>(TYPES.ThorwableWeapon).to(Shuriken);
 
 // Container Module
-let warriors = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-    bind<Ninja>("Ninja").to(Ninja).inSingletonScope();
-})
+let warriors = new ContainerModule(
+  (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+    bind<Ninja>("Ninja")
+      .to(Ninja)
+      .inSingletonScope();
+  }
+);
 
 container.load(warriors);
 
-export {container}
+export { container };
